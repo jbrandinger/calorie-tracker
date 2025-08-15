@@ -41,6 +41,7 @@ export class MemStorage implements IStorage {
     const entry: FoodEntry = {
       ...insertEntry,
       id,
+      serving: insertEntry.serving || null,
       timestamp: new Date(),
     };
     this.foodEntries.set(id, entry);

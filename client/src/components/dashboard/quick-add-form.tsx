@@ -127,6 +127,7 @@ export default function QuickAddForm() {
                       <Input
                         placeholder="1 piece"
                         {...field}
+                        value={field.value || ""}
                         data-testid="input-serving"
                       />
                     </FormControl>

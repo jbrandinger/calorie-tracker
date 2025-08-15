@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertCalorieGoalSchema, type InsertCalorieGoal, type CalorieGoal } from "@shared/schema";
@@ -38,7 +39,7 @@ export default function Settings() {
   });
 
   // Update form when data loads
-  React.useEffect(() => {
+  useEffect(() => {
     if (calorieGoal) {
       form.reset({
         dailyCaloriesGoal: calorieGoal.dailyCaloriesGoal,
